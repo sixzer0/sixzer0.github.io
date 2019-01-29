@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Features - </title>
+    <link>https://sixzer0.github.io/categories/features/</link>
+    <description>Recent content in Features on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us,ko-kr</language>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://sixzer0.github.io/categories/features/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo로 Github 블로그 만들기</title>
+      <link>https://sixzer0.github.io/post/using-github/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sixzer0.github.io/post/using-github/</guid>
+      <description>Static Site Generator, Hugo 와 Github page를 이용해서 개인블로그를 구축하는 방법을 소개한다. 대게는 naver 블로그, tistory 등을 많이 사용하지만 만드는 김에 Git Hosting을 사용해보고자 했다. </description>
+    </item>
+    
+    <item>
+      <title>Aether Features</title>
+      <link>https://sixzer0.github.io/post/aether-features/</link>
+      <pubDate>Wed, 19 Dec 2018 10:35:35 -0500</pubDate>
+      
+      <guid>https://sixzer0.github.io/post/aether-features/</guid>
+      <description>Hugo combined with the Aether theme turns easy to write markdown into powerful web pages.  KaTeX, Highlight.js, and Hugo provides the ability to create mathmatical symobols, equations, highlighted code, tables, lists, and much more.</description>
+    </item>
+    
+  </channel>
+</rss>

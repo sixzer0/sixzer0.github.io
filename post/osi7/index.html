@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us,ko-kr" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>OSI 7계층 &middot; </title>
+  <meta name="description" content="들어도 들어도 이해되지 않던 OSI 7계층을 간단하고 쉽게 정리해서 기억하기 위해 정리해서 올린다. 네트워크는 알수록 끝이 없기 때문에 깊은 부분을 몰라도 이해할 수 있도록 최대한 쉽게 정리했다." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://sixzer0.github.io/css/main.min.css" />
+  
+  <style>
+    body {
+      background: #ecedef url("https://sixzer0.github.io/") repeat;
+    }
+  </style>
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://sixzer0.github.io/" class="nav-text">not decided yet</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://sixzer0.github.io/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://sixzer0.github.io/about/" class="hamburger-menu-overlay-link">About 6Zero</a></li>
+      <li><a href="https://sixzer0.github.io/categories/features" class="hamburger-menu-overlay-link">Features</a></li><li><a href="https://sixzer0.github.io/categories/hugo" class="hamburger-menu-overlay-link">Hugo</a></li><li><a href="https://sixzer0.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" class="hamburger-menu-overlay-link">네트워크</a></li>
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+        	<h1 class="post-title">OSI 7계층</h1>
+          <p class="post-date">Posted <time datetime="2019-04-04">Apr 4, 2019</time></p>
+        </header>
+        
+        <picture class="post-figure">
+            
+            <source srcset="https://sixzer0.github.io/">
+          <img src="https://sixzer0.github.io/" >
+        </picture>
+        
+        
+
+<p>들어도 들어도 이해되지 않던 OSI 7계층을 간단하고 쉽게 정리해서 기억하기 위해 정리해서 올린다. 네트워크는 알수록 끝이 없기 때문에 깊은 부분을 몰라도 이해할 수 있도록 최대한 쉽게 정리했다. 그림과 함께 이해하면 더 쉽지만 일단은 글로만 올리고 추후에 업뎃하도록 하겠다.</p>
+
+<h3 id="7-응용계층-application-layer">7. 응용계층 Application Layer</h3>
+
+<p>응용계층은 7계층 중에서 가장 위에 있는 계층으로 사용자가 볼 수 있고, 사용자와 상호작용하는 응용프로그램이 실제로 작동하는 계층이다. 크롬, 사파리 등이 대표적이다</p>
+
+<h3 id="6-표현계층-presentation-layer">6. 표현계층 Presentation Layer</h3>
+
+<p>표현계층은 말그대로 데이터의 표현을 결정하는 층으로 응용계층에서 받은 데이터에 확장자를 붙이거나 어떤 유형의 데이터인지 알려주고, 데이터의 암호화, 복호화한다.</p>
+
+<h3 id="5-세션계층-session-layer">5. 세션계층 Session Layer</h3>
+
+<p>세션계층은 데이터의 통신경로를 끊거나 확립하고 전달방식(동시송수신 등)을 설정한다.</p>
+
+<h3 id="4-전송계층-transport-layer">4. 전송계층 Transport Layer</h3>
+
+<p>데이터의 전송방식(TCP, UDP 등)을 결정하고 포트번호를 구분한다. 포트번호는 아파트에 호수에 비유하여 이해하면 쉽다.
+ * TCP
+  - 연결형 프로토콜
+     연결이 성공해야 통신이 가능. 상대에게 수신이 가능한지 묻고       가능하다면 데이터를 전송한다.
+  - 신뢰성 제공
+     패킷이 정상적으로 보내졌는지 확인, 오류가 있다면 에러복구O , 재전송O
+  - 1:1 통신 방식
+  - UDP보다 전송속도가 느리다</p>
+
+<ul>
+<li>UDP
+
+<ul>
+<li>비연결형 프로토콜
+연결과 상관없이 보낸다</li>
+</ul></li>
+<li>신뢰성 제공 X
+ 패킷이 제대로 전달되었는지 확인X, 에러복구X, 재전송 X</li>
+<li>1:N, 1:1, N:N 통신방식</li>
+<li>TCP보다 전송속도가 발라 동영상 음성 등 멀티미디어 통신에 사용</li>
+</ul>
+
+<h3 id="3-네트워크-계층-network-layer">3. 네트워크 계층 Network Layer</h3>
+
+<p>논리적 주소(IP Address)를 구분하고, 최종경로를 결정한다.</p>
+
+<h3 id="2-데이터-링크-계층-data-link-layer">2. 데이터 링크 계층 Data Link Layer</h3>
+
+<p>물리적주소(MAC Address)를 구분하고 데이터 운송방식을 결정한다
+ 데이터 운송방식은 LAN(Local-Area Network, 근거리망)에서는 Ehernet을
+ WAN(Wide-Area Network, 광역통신망 )에서는 HDLC,PPP등을 사용한다</p>
+
+<h3 id="1-물리-계층-physical-area">1. 물리 계층 Physical Area</h3>
+
+<p>물리 계층에서는 데이터를 비트로 변환하고, LAN카드가 비트를 전기적 신호로 변환하여 전송한다.</p>
+
+<p>처음 OSI 7계층을 공부하기 위해 여기저기 검색하고 설명들을 쭉 읽어봤는데 데이터를 실제로 전송하는 부분이 어디인지 굉장히 모호했다. 왜냐하면 어떤 사이트에서는 전송계층에서, 또 어떤 사이트에서는 데이터 링크 계층에서 실제로 데이터를 전송하는것마냥 설명을 해놓았기 때문이었다.(내가 이해력이 딸린걸수도 있지만..) 공부해보니 각 단계를 이렇다 뚜렷하게 구분하는 것은 초보자 수준에서는 아직 모르는 지식이 너무 많았다. 그래도 포기하지 않고 공부하면서 깨달은 확실한 것은 1계층 즉 물리계층(Physical Layer)에서 라우터 혹은 스위치로 데이터가 전송되고 나머지 6개의 계층은 물리계층에서 데이터를 전송하기 위한 일종의 가공, 즉 포장과정이라는 것이다.</p>
+
+<p>네트워크쪽은 공부할게 산더미고 처음듣는 생소한 용어도 많고, 또 굉장히 어려운 것 같다&hellip; 더 열심히 해봐야지..</p>
+
+      </article>
+      <script src="https://utteranc.es/client.js"
+      repo="sixzer0/blog-comments"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+</script>
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://sixzer0.github.io/post/using-github/" class="card blog-card" rel="bookmark" >
+    
+    <div class="card-img-container">
+      <p class="card-img-overlay">Next Article</p>
+      <picture>
+        
+        <source srcset="https://sixzer0.github.io/img/Hugo.jpg">
+        <img src="https://sixzer0.github.io/img/Hugo.jpg" class="card-img" >
+      </picture>
+    </div>
+    
+  <article class="card-body">
+    <h2 class="card-title">Hugo로 Github 블로그 만들기</h2>
+    <p class="card-text">Static Site Generator, Hugo 와 Github page를 이용해서 개인블로그를 구축하는 방법을 소개한다. 대게는 naver 블로그, tistory 등을 많이 사용하지만 만드는 김에 Git Hosting을 사용해보고자 했다. </p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2019-01-29 129:00">Jan 29, 2019</time></p>
+      <p>#HUGO #features </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://sixzer0.github.io/" class="card home-card" style="color:black" >
+  Home
+</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script src="https://sixzer0.github.io/js/core.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </body>
+</html>

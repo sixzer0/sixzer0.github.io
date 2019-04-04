@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us,ko-kr</language>
-    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://sixzer0.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OSI 7계층</title>
+      <link>https://sixzer0.github.io/post/osi7/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sixzer0.github.io/post/osi7/</guid>
+      <description>들어도 들어도 이해되지 않던 OSI 7계층을 간단하고 쉽게 정리해서 기억하기 위해 정리해서 올린다. 네트워크는 알수록 끝이 없기 때문에 깊은 부분을 몰라도 이해할 수 있도록 최대한 쉽게 정리했다.</description>
+    </item>
     
     <item>
       <title>About 6Zero</title>
